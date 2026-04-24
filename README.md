@@ -23,7 +23,7 @@ This assignment is worth **10 points** and is designed to make sure you know how
 ## 🛠️ Step 1 — Accept the Assignment
 
 1. Click the **GitHub Classroom assignment link** provided by your teacher.
-2. Sign in to GitHub with your school account (or personal account if directed).
+2. Sign in to GitHub with your school Google account.
 3. Click **Accept this assignment**.
 4. GitHub will create a **personal copy** of this repository just for you. Wait for the green checkmark ✅, then click the link to open your repo.
 
