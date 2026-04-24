@@ -32,22 +32,121 @@ This assignment is worth **10 points** and is designed to make sure you know how
 
 ---
 
-## 🖥️ Step 2 — Clone the Repository in VS Code
+## 🖥️ Step 2 — Set Up Your Folder Structure on the V: Drive
 
-Cloning downloads your assignment repo to your computer so you can edit files.
+Before you clone, you need to create the correct folder on **your personal network drive (V: Drive)**. This keeps all your work organized across all your CTE courses.
+
+### 📂 Finding Your V: Drive
+
+1. Open **File Explorer** (the folder icon on your taskbar).
+2. Click **This PC** in the left panel.
+3. Look for a drive labeled **`firstinitiallastname`** — this is your **V: Drive** (e.g., `jsmith` for John Smith).
+4. Double-click it to open your personal network drive.
+
+> ⚠️ If you do not see your V: Drive, raise your hand and let your teacher know.
+
+---
+
+### 📁 Build Your Folder Structure
+
+You will organize your repos inside your V: Drive by **course**, then by **unit/lesson/activity**. This way you always know exactly where your work is.
+
+#### 📅 Your Course Lineup by Year
+
+| School Year | Courses |
+|-------------|--------|
+| **This Year (2025–26)** | CSE · CSP · Cyber |
+| **Next Year (2026–27)** | IT Fundamentals · CSA · Cyber |
+| **2027–28** | IT Fundamentals · C# · Cyber |
+| **2028–29** | IT Fundamentals · CSP · Cyber |
+
+---
+
+#### 📁 Folder Structure Options
+
+Choose the structure that matches how your teacher has organized the course. Use **one consistent structure per class** — don’t mix them.
+
+**Option A — Unit → Lesson → Activity** *(most organized, recommended for larger courses)*
+```
+V:\
+└── CSE\
+    └── Unit1-Programming-Basics\
+        └── Lesson1-Variables\
+            └── Activity1-HelloWorld\   ← clone repo here
+```
+
+**Option B — Lesson → Activity** *(good for shorter courses)*
+```
+V:\
+└── CSP\
+    └── Lesson3-Data\
+        └── Activity2-Spreadsheets\   ← clone repo here
+```
+
+**Option C — Activity Only** *(use only if your teacher directs you to)*
+```
+V:\
+└── Cyber\
+    └── Activity5-Phishing-Lab\   ← clone repo here
+```
+
+> 💡 **Naming Tips:**
+> - Use the **course abbreviation** as the top-level folder (e.g., `CSE`, `CSP`, `Cyber`, `CSA`, `IT-Fundamentals`, `CSharp`)
+> - No spaces in folder names — use a **dash `-`** instead (e.g., `Unit1-Intro` not `Unit 1 Intro`)
+> - Be **consistent** — use the same naming style every time so you can find your work fast
+
+---
+
+#### 📅 Full Example — This Year’s Courses (2025–26)
+
+```
+V:\
+├── CSE\
+│   ├── Unit1-Intro\
+│   │   ├── Lesson1-What-Is-CS\
+│   │   │   └── Activity1-GitHub-Setup\   ← THIS assignment goes here
+│   │   └── Lesson2-Algorithms\
+│   │       └── Activity1-Flowcharts\
+│   └── Unit2-Programming\
+│       └── Lesson1-Variables\
+│           └── Activity1-HelloWorld\
+├── CSP\
+│   ├── Unit1-Digital-Information\
+│   │   └── Lesson1-Binary\
+│   │       └── Activity1-Number-Systems\
+│   └── Unit2-The-Internet\
+│       └── Lesson1-How-Internet-Works\
+│           └── Activity1-Network-Diagram\
+└── Cyber\
+    ├── Unit1-Cybersecurity-Basics\
+    │   └── Lesson1-Threats\
+    │       └── Activity1-Threat-Identification\
+    └── Unit2-Defense\
+        └── Lesson1-Firewalls\
+            └── Activity1-Firewall-Lab\
+```
+
+---
+
+## 🖥️ Step 3 — Clone the Repository in VS Code
+
+Now that your folder is created, you’ll clone the repo **directly into it**.
 
 1. Open **VS Code**.
 2. Open the **Command Palette** with `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (Mac).
 3. Type `Git: Clone` and press **Enter**.
 4. Paste your repository URL (from Step 1) and press **Enter**.
-5. Choose a folder on your computer to save the project (e.g., `Documents/GitHub`).
-6. Click **Open** when VS Code asks if you want to open the cloned repository.
+5. When asked where to save, **navigate to your V: Drive** and select the correct activity folder you just created.
+6. Click **Select as Repository Destination**.
+7. Click **Open** when VS Code asks if you want to open the cloned repository.
+
+> ✅ Your repo is now saved in the right place on your V: Drive and will be there every time you log in at school.
 
 You should now see the project files in the **Explorer panel** on the left side of VS Code.
 
 ---
 
-## ✏️ Step 3 — Complete the Assignment
+## ✏️ Step 4 — Complete the Assignment
 
 1. In VS Code, open the file called **`my_intro.md`** (found in the Explorer panel).
 2. Follow the instructions inside that file to fill in your answers.
@@ -55,7 +154,7 @@ You should now see the project files in the **Explorer panel** on the left side 
 
 ---
 
-## 💾 Step 4 — Commit Your Changes
+## 💾 Step 5 — Commit Your Changes
 
 A **commit** is like saving a snapshot of your work with a note describing what you did.
 
@@ -68,7 +167,7 @@ A **commit** is like saving a snapshot of your work with a note describing what 
 
 ---
 
-## 🚀 Step 5 — Push to GitHub (Turn It In!)
+## 🚀 Step 6 — Push to GitHub (Turn It In!)
 
 Pushing sends your committed changes back to GitHub — this is how you **turn in your assignment**.
 
@@ -94,10 +193,12 @@ Pushing sends your committed changes back to GitHub — this is how you **turn i
 
 | Problem | Solution |
 |---------|----------|
-| VS Code doesn't show "Git: Clone" | Make sure Git is installed: [git-scm.com](https://git-scm.com) |
+| VS Code doesn’t show "Git: Clone" | Make sure Git is installed: [git-scm.com](https://git-scm.com) |
 | Asked for GitHub login in VS Code | Sign in with your GitHub username and password or token |
 | Push is rejected | Make sure you accepted the assignment first so you own the repo |
-| Can't find your repo | Check GitHub Classroom dashboard or ask your teacher for the link |
+| Can’t find your repo | Check GitHub Classroom dashboard or ask your teacher for the link |
+| V: Drive not showing in This PC | Raise your hand — your teacher will reconnect your network drive |
+| Cloned to the wrong folder | Right-click the folder in File Explorer, delete it, and re-clone to the correct location |
 
 ---
 
