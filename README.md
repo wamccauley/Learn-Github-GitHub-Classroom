@@ -16,7 +16,7 @@ Welcome to your first GitHub Classroom assignment! In this activity, you will:
 4. **Commit** your changes with a meaningful message
 5. **Push** your work back to GitHub to turn it in
 
-This assignment is worth **10 points** and is designed to make sure you know how to use GitHub as your digital "turn-in box" for the rest of this course.
+This assignment is worth **10 points** and is designed to make sure you know how to use GitHub as your digital “turn-in box” for the rest of this course.
 
 ---
 
@@ -128,21 +128,91 @@ V:\
 
 ---
 
-## 🖥️ Step 3 — Clone the Repository in VS Code
+## 🖥️ Step 3 — Set Up Git & Clone the Repository in VS Code
 
-Now that your folder is created, you’ll clone the repo **directly into it**.
+### 📥 Step 3A — Download & Install Git (Do This First!)
+
+Before you can clone a repository, **Git must be installed** on your computer. Git is the software that actually talks to GitHub behind the scenes.
+
+1. Open a web browser and go to:  
+   **[https://git-scm.com/install/windows](https://git-scm.com/install//windows)**
+2. The page will automatically detect Windows and show a **Download** button — click it.
+3. Open the downloaded **`.exe`** installer file.
+4. Click **Next** through all the installer screens, keeping the **default options** selected.
+5. Click **Install**, then click **Finish** when installation is complete.
+
+> ✅ Git is now installed on this computer. **You only need to do this once per computer.**  
+> If Git was already installed, VS Code will tell you — you can skip straight to Step 3B.
+
+---
+
+### 🖥️ Step 3B — Open VS Code & Clone the Repository
+
+Now that Git is installed, you can clone your assignment repo into the folder you created in Step 2.
 
 1. Open **VS Code**.
-2. Open the **Command Palette** with `Ctrl+Shift+P` (Windows) or `Cmd+Shift+P` (Mac).
+2. Open the **Command Palette** with `Ctrl+Shift+P` (Windows).
 3. Type `Git: Clone` and press **Enter**.
-4. Paste your repository URL (from Step 1) and press **Enter**.
-5. When asked where to save, **navigate to your V: Drive** and select the correct activity folder you just created.
+4. Paste your **repository URL** (from Step 1) and press **Enter**.
+5. When asked where to save, **navigate to your V: Drive** and select the correct activity folder you created in Step 2.
 6. Click **Select as Repository Destination**.
 7. Click **Open** when VS Code asks if you want to open the cloned repository.
 
-> ✅ Your repo is now saved in the right place on your V: Drive and will be there every time you log in at school.
+> ✅ Your repo is now saved on your V: Drive and will be there every time you log in at school.
 
 You should now see the project files in the **Explorer panel** on the left side of VS Code.
+
+---
+
+### 🖥️ Step 3C — Open the Terminal in VS Code
+
+Next, you need to open the built-in **Terminal** in VS Code. The terminal lets you type commands directly to Git.
+
+**To open the Terminal, use one of these methods:**
+
+| Method | How |
+|--------|-----|
+| **Keyboard shortcut** | Press `` Ctrl+` `` (the backtick key — just above the **Tab** key) |
+| **Menu bar** | Click **View** → **Terminal** |
+| **Command Palette** | Press `Ctrl+Shift+P`, type `Terminal: Create New Terminal`, press Enter |
+
+A terminal panel will appear at the **bottom** of VS Code showing a prompt like:  
+`PS C:\Users\...>` (PowerShell) or `C:\Users\...>`
+
+> ⚠️ **If the terminal doesn’t open or disappears:**
+> 1. Click **View** in the top menu bar.
+> 2. Click **Terminal** from the dropdown menu.
+> 3. If the terminal panel appears but is very small, hover over the top edge of the panel and **drag it upward** to make it taller.
+> 4. If you still don’t see it, click **View** → **Appearance** → **Show Panel** to reveal the bottom panel.
+
+---
+
+### ⚙️ Step 3D — Add Your Name & Email to Git
+
+Git needs to know **who you are** so that every commit (save) is labeled with your name. You only need to do this **once per computer**.
+
+In the VS Code terminal, type each command below and press **Enter** after each one.  
+Replace the example text with your **real name and school email address**:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+```
+
+**Example — what it looks like with real info:**
+```bash
+git config --global user.name "Alex Smith"
+git config --global user.email "asmith@students.school.edu"
+```
+
+> ✅ **To verify it worked**, type these commands and press Enter after each one:
+> ```bash
+> git config --global user.name
+> git config --global user.email
+> ```
+> Your name and email should be printed back to you.
+
+> ⚠️ **If you see an error** like `git is not recognized`, Git did not install correctly. Go back to Step 3A and re-run the installer, then restart VS Code.
 
 ---
 
@@ -150,7 +220,7 @@ You should now see the project files in the **Explorer panel** on the left side 
 
 1. In VS Code, open the file called **`my_intro.md`** (found in the Explorer panel).
 2. Follow the instructions inside that file to fill in your answers.
-3. Save the file when you are done (`Ctrl+S` or `Cmd+S`).
+3. Save the file when you are done (`Ctrl+S`).
 
 ---
 
@@ -158,7 +228,7 @@ You should now see the project files in the **Explorer panel** on the left side 
 
 A **commit** is like saving a snapshot of your work with a note describing what you did.
 
-1. Click the **Source Control** icon in the left sidebar (it looks like a branch `⑂`).
+1. Click the **Source Control** icon in the left sidebar (it looks like a branch `⑮`).
 2. You should see `my_intro.md` listed under **Changes**.
 3. Click the **`+`** icon next to the file to **stage** it.
 4. In the **Message** box at the top, type a commit message like:  
@@ -193,7 +263,10 @@ Pushing sends your committed changes back to GitHub — this is how you **turn i
 
 | Problem | Solution |
 |---------|----------|
-| VS Code doesn’t show "Git: Clone" | Make sure Git is installed: [git-scm.com](https://git-scm.com) |
+| VS Code doesn’t show “Git: Clone” | Git is not installed — go back to **Step 3A** and install Git from [git-scm.com/install/windows](https://git-scm.com/install//windows) |
+| `git is not recognized` error in terminal | Restart VS Code after installing Git; if still broken, re-run the Git installer |
+| Terminal won’t open in VS Code | Click **View → Terminal** from the menu bar, or press `` Ctrl+` `` |
+| Name/email not saving | Make sure you included the quotes: `git config --global user.name "Your Name"` |
 | Asked for GitHub login in VS Code | Sign in with your GitHub username and password or token |
 | Push is rejected | Make sure you accepted the assignment first so you own the repo |
 | Can’t find your repo | Check GitHub Classroom dashboard or ask your teacher for the link |
@@ -208,7 +281,7 @@ Pushing sends your committed changes back to GitHub — this is how you **turn i
 |----------|--------|
 | `my_intro.md` file is present and edited | 4 pts |
 | All questions answered completely | 4 pts |
-| Commit message is descriptive (not "update" or "asdf") | 2 pts |
+| Commit message is descriptive (not “update” or “asdf”) | 2 pts |
 | **Total** | **10 pts** |
 
 ---
